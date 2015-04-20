@@ -67,14 +67,11 @@ Follow <a href="https://developer.apple.com/library/ios/documentation/IDEs/Conce
 	
 **6) Implementing the SDK**
 
-Add to your Podfile file.
+ * Add to your Podfile file.
 
 	Pod 'AfterPushSDK', '~>1.0'
 	
-Or Download the `AfterPushSDK.h` and `libAfterPushSDK.a` and add to your project.
-
-Framework required:
-
+ * Download the `AfterPushSDK.h` and `libAfterPushSDK.a` and add to your project with two frameworks:
 	CoreLocation.framework
 	CoreTelephony.framework
   
