@@ -40,18 +40,20 @@ Export p12 for your private key and save as apns-pro-key.12
   
 **2) Convert p12 to PEM format**
 #####Sandbox:
-
+```cmd
 	openssl pkcs12 -clcerts -nokeys -out apns-dev-cert.pem -in apns-dev-cert.p12
 	openssl pkcs12 -nocerts -out apns-dev-key.pem -in apns-dev-key.p12
 	openssl rsa -in apns-dev-key.pem -out apns-dev-key-noenc.pem
 	cat apns-dev-cert.pem apns-dev-key-noenc.pem > apns-dev.pem
-
+```
 ####Production:
+```cmd
 	openssl pkcs12 -clcerts -nokeys -out apns-pro-cert.pem -in apns-pro-cert.p12
 	openssl pkcs12 -nocerts -out apns-pro-key.pem -in apns-pro-key.p12
 	openssl rsa -in apns-pro-key.pem -out apns-pro-key-noenc.pem
 	cat apns-pro-cert.pem apns-pro-key-noenc.pem > apns-pro.pem
-Keep apns-dev.pem and apns-pro.pem file only, other can be delete.
+```
+
     
 **3) Register an account at AfterPush**
   - Proceed to <a href="http://panel.afterpush.com">AfterPush Panel</a> to create an account. It's quick and easy!
@@ -62,7 +64,7 @@ Keep apns-dev.pem and apns-pro.pem file only, other can be delete.
 **5) Get your app key**
 
 	
-**4) Implementing the SDK**
+**6) Implementing the SDK**
 
 Add to your Podfile file.
 
@@ -75,11 +77,13 @@ Framework required:
 	CoreLocation.framework
 	CoreTelephony.framework
   
-**5) Modify Your AppDelegate.m**
-  - Navigate to AppDelegate.m of your project and include : 
+**7) Modify Your AppDelegate.m**
+
+#####Navigate to AppDelegate.m of your project and include : 
 ```objc
+
 	#import "AfterPushSDK.h"
-    - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	    // Override point for customization after application launch.
 	    
 	    [[AfterPushSDK sharedInstance]initWithAppKey:@"YOUR_APP_KEY"];
@@ -103,6 +107,7 @@ Framework required:
 	didReceiveRemoteNotification:(NSDictionary *)userInfo {
 	    [[AfterPushSDK sharedInstance] notificationHandler:userInfo];
 	}
+	
 ```
 
 
