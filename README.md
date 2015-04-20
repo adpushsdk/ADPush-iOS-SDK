@@ -60,9 +60,11 @@ Export p12 for your private key and save as apns-pro-key.12
 
 **4) Create your apps and upload pem file.**
 
+![alt text](https://github.com/afterpush/AfterPush-iOS-SDK/blob/master/screenshots/create_app.png)
 	
 **5) Get your app key**
 
+![alt text](https://github.com/afterpush/AfterPush-iOS-SDK/blob/master/screenshots/app_key.png)
 	
 **6) Implementing the SDK**
 
@@ -86,7 +88,7 @@ Framework required:
 	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	    // Override point for customization after application launch.
 	    
-	    [[AfterPushSDK sharedInstance]initWithAppKey:@"YOUR_APP_KEY"];
+	    [[AfterPushSDK sharedInstance] initWithAppKey:@"YOUR_APP_KEY"];
 		#ifdef __IPHONE_8_0
 	    //Right, that is the point
 	    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIRemoteNotificationTypeBadge
