@@ -24,29 +24,28 @@ AfterPush is an Push Notification Service for all the iOS and Android developer 
 - App version control that syncs with iTunes Store.
 
 
-###Installation
-**1) Obtain p12 from Apple Developer**
+##Installation
+**1) Get p12 from Apple Developer**
 
 Follow <a href="https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringPushNotifications/ConfiguringPushNotifications.html">this guide</a> to create certificate for sandbox and production environment, dont forget to enable the push notification on your app id.
 ####Sandbox
-Export p12 for your certificate and save as anps-dev-cert.p12
-
-Export p12 for your private key and save as apns-dev-key.12
+ * Export p12 for your certificate and save as `anps-dev-cert.p12`
+ * Export p12 for your private key and save as `apns-dev-key.12`
+ 
 ####Production
-Export p12 for your certificate and save as anps-pro-cert.p12
-
-Export p12 for your private key and save as apns-pro-key.12
+  * Export p12 for your certificate and save as `anps-pro-cert.p12`
+  * Export p12 for your private key and save as `apns-pro-key.12`
 
   
 **2) Convert p12 to PEM format**
-#####Sandbox:
+######Sandbox:
 ```cmd
 	openssl pkcs12 -clcerts -nokeys -out apns-dev-cert.pem -in apns-dev-cert.p12
 	openssl pkcs12 -nocerts -out apns-dev-key.pem -in apns-dev-key.p12
 	openssl rsa -in apns-dev-key.pem -out apns-dev-key-noenc.pem
 	cat apns-dev-cert.pem apns-dev-key-noenc.pem > apns-dev.pem
 ```
-####Production:
+#####Production:
 ```cmd
 	openssl pkcs12 -clcerts -nokeys -out apns-pro-cert.pem -in apns-pro-cert.p12
 	openssl pkcs12 -nocerts -out apns-pro-key.pem -in apns-pro-key.p12
@@ -72,7 +71,7 @@ Add to your Podfile file.
 
 	Pod 'AfterPushSDK', '~>1.0'
 	
-Or Download the .h and .m file copy to your project.
+Or Download the `AfterPushSDK.h` and `libAfterPushSDK.a` and add to your project.
 
 Framework required:
 
@@ -81,7 +80,7 @@ Framework required:
   
 **7) Modify Your AppDelegate.m**
 
-#####Navigate to AppDelegate.m of your project and include : 
+#####Navigate to `AppDelegate.m` of your project and include : 
 ```objc
 
 	#import "AfterPushSDK.h"
@@ -116,6 +115,6 @@ Framework required:
 
 ***
 
-#Support
+##Support
 Any Problem with SDK, please send your feed back to emai<support@afterpush.com> to us, that's important to us.
 
