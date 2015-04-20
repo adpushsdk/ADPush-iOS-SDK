@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
 
   s.name         = "AfterPushSDK"
-  s.version      = "0.0.5"
+  s.version      = "0.0.7"
   s.summary      = "AfterPushSDK for iOS."
 
   s.description  = "AfterPush SDK for iOS. \nAfterPush is an Push Notification Service for all the iOS and Android developer to push notification to their users.\n           Please visithttp://www.afterpush.com/ \n"
@@ -27,10 +27,12 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/afterpush/AfterPush-iOS-SDK.git", :tag => s.version.to_s }
 
 
-  s.source_files  = "$(PODS_ROOT)/AfterPushSDK/*"
+  s.source_files  = "AfterPushSDK.h"
+  s.preserve_paths = "libAfterPushSDK.a"
+  s.vendored_libraries = "libAfterPushSDK.a"
   s.frameworks = 'CoreLocation', 'CoreTelephony'
   s.requires_arc = true
 
-  s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/AfterPushSDK/" }
+  s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/AfterPushSDK/**" }
 
 end
