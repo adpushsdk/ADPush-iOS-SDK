@@ -10,19 +10,21 @@ Pod::Spec.new do |s|
 
 
   s.name         = "AfterPushSDK"
-  s.version      = "1.0"
+  s.version      = "0.0.1"
   s.summary      = "AfterPushSDK for iOS."
 
   s.description  = "AfterPush SDK for iOS. \nAfterPush is an Push Notification Service for all the iOS and Android developer to push notification to their users.\n           Please visithttp://www.afterpush.com/ \n"
 
   s.homepage     = "http://www.afterpush.com"
-  s.license      = "LICENSE Copyright 2014 - 2015 Afterpush.com, Inc. All rights reserved."
+
+  s.license      = { :type => 'Copyright', :text => "LICENSE Copyright 2014 - 2015 Afterpush.com, Inc. All rights reserved"}
+
 
   s.author             = 'AfterPush'
   s.social_media_url   = "http://twitter.com/AfterPush"
 
   s.platform      = :ios, '6.0'
-  s.source       = { :git => "http://github.com/afterpush/AfterPush-iOS-SDK.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/afterpush/AfterPush-iOS-SDK.git", :tag => s.version.to_s }
 
 
   s.source_files  = "*.h"
