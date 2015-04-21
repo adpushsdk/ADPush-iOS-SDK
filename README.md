@@ -69,7 +69,7 @@ Follow <a href="https://developer.apple.com/library/ios/documentation/IDEs/Conce
 
  * Add to your Podfile file.
 
-	Pod 'AfterPushSDK', '~>1.0'
+	Pod 'AfterPushSDK', '~>0.0.8'
 	
  * Download the `AfterPushSDK.h` and `libAfterPushSDK.a` and add to your project with two frameworks:
 	CoreLocation.framework
