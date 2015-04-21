@@ -113,5 +113,5 @@ Follow <a href="https://developer.apple.com/library/ios/documentation/IDEs/Conce
 ***
 
 ##Support
-Any Problem with SDK, please send your feed back to emai<support@afterpush.com> to us, that's important to us.
+Any Problem with SDK, please send your feed back to email <support@afterpush.com> to us, that's important to us.
 
