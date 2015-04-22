@@ -29,11 +29,11 @@ AfterPush is an Push Notification Service for all the iOS and Android developer 
 
 Follow <a href="https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringPushNotifications/ConfiguringPushNotifications.html">this guide</a> to create certificate for sandbox and production environment, dont forget to enable the push notification on your app id.
 ####Sandbox
- * Export p12 for your certificate and save as `anps-dev-cert.p12`
+ * Export p12 for your certificate and save as `apns-dev-cert.p12`
  * Export p12 for your private key and save as `apns-dev-key.12`
  
 ####Production
-  * Export p12 for your certificate and save as `anps-pro-cert.p12`
+  * Export p12 for your certificate and save as `apns-pro-cert.p12`
   * Export p12 for your private key and save as `apns-pro-key.12`
 
   
