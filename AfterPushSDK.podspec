@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
 
   s.name         = "AfterPushSDK"
-  s.version      = "0.0.9"
+  s.version      = "0.1.0"
   s.summary      = "AfterPushSDK for iOS."
 
   s.description  = "AfterPush SDK for iOS. \nAfterPush is an Push Notification Service for all the iOS and Android developer to push notification to their users.\n           Please visithttp://www.afterpush.com/ \n"
