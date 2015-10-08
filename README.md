@@ -1,25 +1,25 @@
 
-#AfterPush iOS SDK
-*By [AfterPush](http://www.afterpush.com/)*
+#ADPush iOS SDK
+*By [ADPush](http://www.ADPush.my/)*
 
 Current SDK Version : *v1.0*
 
 ## Introduction
-AfterPush is an Push Notification Service for all the iOS and Android developer to push notification to their users.
+ADPush is an Push Notification Service for all the iOS and Android developer to push notification to their users.
 
 ###Features
 - Fast and lightweight library for push notifications.
 - App version control with iTunes Store.
 - Easy implementation in Xcode via CocoaPods.
 - Live support and rapid updates!
-- Push-on-the-go with our AfterPush apps.
+- Push-on-the-go with our ADPush apps.
 - First ever, try pushing notification without having to implement our SDK.
 
 
 ###Change Logs
 **Version 1.0**
 
-- AfterPush first version launch
+- ADPush first version launch
 - Remote Push Notifications 
 - App version control that syncs with iTunes Store.
 
@@ -54,24 +54,24 @@ Follow <a href="https://developer.apple.com/library/ios/documentation/IDEs/Conce
 ```
 
     
-**3) Register an account at AfterPush**
-  - Proceed to <a href="http://panel.afterpush.com">AfterPush Panel</a> to create an account. It's quick and easy!
+**3) Register an account at ADPush**
+  - Proceed to <a href="http://panel.ADPush.com.my">ADPush Panel</a> to create an account. It's quick and easy!
 
 **4) Create your apps and upload pem file.**
 
-![alt text](https://github.com/afterpush/AfterPush-iOS-SDK/blob/master/screenshots/create_app.png)
+![alt text](https://github.com/adpush/ADPush-iOS-SDK/blob/master/screenshots/create_app.png)
 	
 **5) Get your app key**
 
-![alt text](https://github.com/afterpush/AfterPush-iOS-SDK/blob/master/screenshots/app_key.png)
+![alt text](https://github.com/adpush/ADPush-iOS-SDK/blob/master/screenshots/app_key.png)
 	
 **6) Implementing the SDK**
 
  * Add to your Podfile file.
 
-	Pod 'AfterPushSDK', '~>0.0.8'
+	Pod 'ADPushSDK', '~>0.0.8'
 	
- * Download the `AfterPushSDK.h` and `libAfterPushSDK.a` and add to your project with two frameworks:
+ * Download the `ADPushSDK.h` and `libADPushSDK.a` and add to your project with two frameworks:
 	CoreLocation.framework
 	CoreTelephony.framework
   
@@ -80,11 +80,11 @@ Follow <a href="https://developer.apple.com/library/ios/documentation/IDEs/Conce
 #####Navigate to `AppDelegate.m` of your project and include : 
 ```objc
 
-	#import "AfterPushSDK.h"
+	#import "ADPushSDK.h"
 	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	    // Override point for customization after application launch.
 	    
-	    [[AfterPushSDK sharedInstance] initWithAppKey:@"YOUR_APP_KEY"];
+	    [[ADPushSDK sharedInstance] initWithAppKey:@"YOUR_APP_KEY"];
 		#ifdef __IPHONE_8_0
 	    //Right, that is the point
 	    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIRemoteNotificationTypeBadge
@@ -99,11 +99,11 @@ Follow <a href="https://developer.apple.com/library/ios/documentation/IDEs/Conce
 	}
 	- (void)application:(UIApplication *)application
 	didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-	    [[AfterPushSDK sharedInstance] registerDeviceToken:deviceToken];
+	    [[ADPushSDK sharedInstance] registerDeviceToken:deviceToken];
 	}
 	- (void)application:(UIApplication *)application
 	didReceiveRemoteNotification:(NSDictionary *)userInfo {
-	    [[AfterPushSDK sharedInstance] notificationHandler:userInfo];
+	    [[ADPushSDK sharedInstance] notificationHandler:userInfo];
 	}
 	
 ```
@@ -113,5 +113,5 @@ Follow <a href="https://developer.apple.com/library/ios/documentation/IDEs/Conce
 ***
 
 ##Support
-Any Problem with SDK, please send your feed back to email <support@afterpush.com> to us, that's important to us.
+Any Problem with SDK, please send your feed back to email <support@ADPush.com> to us, that's important to us.
 
